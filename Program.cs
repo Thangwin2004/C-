@@ -1,13 +1,19 @@
 ﻿using System;
 
-namespace dotnet_system_time
+namespace Program
 {
     class Program
     {
         static void Main(string[] args)
         {
-            DateTime localDate = DateTime.Now;
-            System.Console.WriteLine("Datetime Now is :" + localDate);
+          float width;
+            float height;
+            Console.Write("Enter width: ");
+            width = float.Parse(Console.ReadLine());
+            Console.Write("Enter height: ");
+            height = float.Parse(Console.ReadLine());
+            float area = width * height;
+            Console.WriteLine("Area is: " + area);
         }
     }
 }
