@@ -1,0 +1,48 @@
+public class cn{
+    public static void cnct(){
+        Console.WriteLine("BMI Calculator");
+            double height, weight;
+            while (true)
+            {
+                Console.Write("Enter your height in meters: ");
+                if (!double.TryParse(Console.ReadLine(), out height) || height <= 0)
+                {
+                    Console.WriteLine("Invalid height. Please enter a positive value.");
+                    continue;
+                }
+
+                Console.Write("Enter your weight in kilograms: ");
+                if (!double.TryParse(Console.ReadLine(), out weight) || weight <= 0)
+                {
+                    Console.WriteLine("Invalid weight. Please enter a positive value.");
+                    continue;
+                }
+
+                break;
+            }
+
+            double bmi = weight / Math.Pow(height, 2);
+            bmi = Math.Round(bmi, 1);
+
+            Console.WriteLine("Your BMI is: " + bmi);
+
+            if (bmi < 18.5)
+            {
+                Console.WriteLine("Underweight");
+            }
+            else if (bmi < 25)
+            {
+                Console.WriteLine("Normal");
+            }
+            else if (bmi < 30)
+            {
+                Console.WriteLine("Overweight");   
+
+            }
+            else
+            {
+                Console.WriteLine("Obese");   
+
+            }
+        }
+    }
